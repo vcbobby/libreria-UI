@@ -1,0 +1,47 @@
+{
+    "name": "creacion-libreria-ui",
+    "version": "0.1.0",
+    "description": "Libreria UI de componentes, donde podras importar components de imagenes, texto, boton o un container",
+    "main": "./dist/index.js",
+    "scripts": {
+        "test": "jest --config ./config/jest.config.js",
+        "release": "npm run build && npm publish",
+        "release:patch": "npm version patch && npm run release",
+        "release:minor": "npm version minor && npm run publish",
+        "release:major": "npm version major && npm run publish",
+        "build": "NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./babel.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored"
+    },
+    "keywords": [
+        "ui",
+        "componentes-react",
+        "libreria-ui"
+    ],
+    "author": "Víctor Castillo <Castillovictor2461@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/platzi/basico-creacion-libreriasui/issues"
+    },
+    "homepage": "https://github.com/platzi/basico-creacion-libreriasui#readme",
+    "dependencies": {
+        "@emotion/css": "^11.10.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.6",
+        "@babel/core": "^7.17.7",
+        "@babel/plugin-transform-runtime": "^7.17.0",
+        "@babel/preset-env": "^7.16.11",
+        "@babel/preset-react": "^7.16.7",
+        "@testing-library/dom": "^8.11.3",
+        "@testing-library/jest-dom": "^5.16.2",
+        "@testing-library/react": "^12.1.4",
+        "babel-loader": "^8.2.3",
+        "babel-preset-minify": "^0.5.1",
+        "jest": "^27.5.1",
+        "prop-types": "^15.8.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
+}
