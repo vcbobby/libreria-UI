@@ -1,2 +1,2 @@
 # libreria-UI
-Creacin de una libreria ui y publicada en nmp
+Creacion de una libreria ui y publicada en nmp
